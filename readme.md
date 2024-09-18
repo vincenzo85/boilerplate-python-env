@@ -1,6 +1,6 @@
-Ecco una sezione di **esclusione di responsabilità** che puoi aggiungere alla fine del tuo `README.md`:
+Ecco il file `README.md` aggiornato con una sezione di "Come iniziare" più evidente che indica chiaramente l'uso del comando `source ./run.sh`.
 
-### `README.md` (con esclusione di responsabilità)
+### `README.md` (con sezione "Come iniziare" e esclusione di responsabilità)
 
 ```markdown
 # WP Monitor Project
@@ -22,22 +22,34 @@ Prima di utilizzare questi script, assicurati di avere:
 - Git installato.
 - Il pacchetto `python-dotenv` sarà installato automaticamente quando si esegue lo script `init_project.sh`.
 
-## Istruzioni per l'uso
+## Come iniziare
 
-### 1. Esecuzione dello script `run.sh`
+Per iniziare a utilizzare questo progetto, segui questi passaggi:
 
-Lo script principale da eseguire è `run.sh`, che decide automaticamente cosa fare in base allo stato del progetto.
+1. **Clona il progetto**:
 
-- Se l'ambiente virtuale non esiste, verrà creato e il progetto sarà inizializzato (incluso Git).
-- Se l'ambiente virtuale esiste già, verrà attivato.
+   ```bash
+   git clone <url-del-repo>
+   cd wp-monitor
+   ```
 
-Per eseguire lo script, devi usare il comando `source` affinché l'ambiente virtuale rimanga attivo nella tua sessione corrente.
+2. **Esegui lo script `run.sh`**:
 
-Esegui il seguente comando nella directory del progetto:
+   Lo script `run.sh` è il punto di ingresso principale e gestisce automaticamente l'inizializzazione e l'attivazione dell'ambiente virtuale.
 
-```bash
-source ./run.sh
-```
+   Se l'ambiente virtuale non esiste, lo script lo creerà e configurerà il progetto. Se l'ambiente virtuale esiste già, lo attiverà.
+
+   **IMPORTANTE**: Usa il comando `source` per eseguire correttamente lo script e mantenere l'ambiente virtuale attivo nella tua sessione corrente.
+
+   ```bash
+   source ./run.sh
+   ```
+
+   Questo comando eseguirà lo script che, a sua volta, deciderà se inizializzare il progetto o semplicemente attivare l'ambiente virtuale esistente.
+
+3. **Sviluppo e gestione del progetto**:
+
+   Dopo aver eseguito il comando sopra, l'ambiente virtuale sarà attivo e potrai iniziare a sviluppare il tuo progetto.
 
 ### 2. Descrizione dei singoli script
 
@@ -96,9 +108,6 @@ Questo progetto è open-source e distribuito sotto la licenza MIT.
 L'uso di questi script è a tuo rischio. Non forniamo garanzie riguardo la correttezza, sicurezza o performance di questi script nel tuo ambiente. Si raccomanda di verificarli accuratamente prima di utilizzarli in produzione.
 ```
 
-### Dettagli sull'esclusione di responsabilità:
-- **Essenza**: Lo scopo dell'esclusione di responsabilità è dichiarare che gli autori non sono responsabili per eventuali danni, problemi o malfunzionamenti derivanti dall'uso del software.
-- **Nessuna garanzia**: Specifica chiaramente che non ci sono garanzie implicite riguardo al software.
-- **Uso a proprio rischio**: Gli utenti devono prendersi la responsabilità dell'uso del software e verificarne la compatibilità con il proprio sistema.
-
-In questo modo, hai aggiunto una protezione legale che chiarisce i limiti di responsabilità relativi all'uso degli script.
+### Modifiche principali:
+1. **Sezione "Come iniziare"**: È stata aggiunta una sezione chiara su come iniziare a utilizzare il progetto, con particolare attenzione all'uso di `source ./run.sh`.
+2. **Evidenziazione dell'importanza del comando `source`**: Sottolinea chiaramente l'uso di `source` per mantenere l'ambiente virtuale attivo dopo l'esecuzione dello script.
